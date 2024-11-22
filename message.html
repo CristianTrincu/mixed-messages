@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="CSS\stylesheet.css">
+    </head>
+<body>
+    <header>
+      <h1>Mixed Messages</h1>
+      <p id="instruction">Choose from one of the options below and you will receive your randomly selected message for the day.</p>
+    </header>
+
+    <main>
+        
+            <button onclick="myMotivation()"><p>Motivation</p></button>
+            <button onclick="myJokes()"><p>Jokes</p></button>
+            <button onclick="myQuotes()"><p>Quotes</p></button>
+        
+        
+        <div id="message"></div>
+
+        <script>
+            var motivation = ["Embrace every challenge as a chance to learn and improve. Striving for progress, not perfection, ensures you’re always moving forward.",
+    "Picture the life you want to live. Every small action today contributes to building that vision. Let the excitement for your future self be a daily motivator.",
+    "Consider the impact you want to leave on the world. What story do you want to tell with your life, and how will others remember you?",
+    "Think of those who believe in you or rely on you. Your efforts can uplift not just your life but also the lives of those you care about."
+];
+var jokes = [
+    "Why don't programmers like nature? It has too many bugs.",
+    "Why do programmers prefer dark mode? Because light attracts bugs.",
+    "How do you comfort a JavaScript bug? You console it.",
+    "Why do Python programmers wear glasses? Because they can't C.",
+    "Why was the function sad? It didn’t get a return."
+];
+
+var quotes = [
+    "The only way to do great work is to love what you do. – Steve Jobs",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+    "Believe you can and you're halfway there. – Theodore Roosevelt",
+    "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
+    "Your time is limited, so don’t waste it living someone else’s life. – Steve Jobs"
+];
+
+
+function myMotivation() {
+    var randomMotivation = motivation[Math.floor(Math.random() * motivation.length)];
+    document.getElementById('message').innerText =randomMotivation;
+    };
+
+function myJokes() {
+    var randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+    document.getElementById('message').innerText = randomJoke
+};
+function myQuotes() {
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('message').innerText = randomQuote;
+};
+        </script>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
